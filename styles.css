@@ -1,0 +1,118 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.import-container {
+    background: #fff;
+    border-radius: 4px;
+    padding: 20px;
+    margin: auto;
+    width: 80%;
+    max-width: 1000px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.step {
+    background: #eee;
+    border-radius: 4px;
+    padding: 20px;
+    flex: 1; 
+    margin-right: 10px; 
+
+.step:last-child {
+    margin-right: 0; 
+}
+
+.format-spec {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.fields-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.available-fields,
+.fields-to-display {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 45%;
+    min-height: 150px;
+    background: #f9f9f9;
+    border-radius: 4px;
+}
+
+.available-fields p,
+.fields-to-display p {
+    font-weight: bold;
+    text-align: center;
+}
+
+.field {
+    padding: 5px;
+    margin: 5px;
+    background: #e7e7e7;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.field:hover {
+    background: #dcdcdc;
+}
+
+.buttons {
+    text-align: right;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #5cb85c;
+    color: white;
+    cursor: pointer;
+}
+
+button#cancelButton {
+    background-color: #d9534f;
+}

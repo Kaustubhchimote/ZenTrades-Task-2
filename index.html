@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Import Products</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="import-container">
+    <h2>Import Products</h2>    
+      <!-- Steps Container -->
+      <div class="steps-container">
+          <!-- Step 1: File Selection -->
+          <div class="step file-selection">
+              <h3>Step 1: Select File</h3>
+              <input type="file" id="fileInput" accept=".json,.csv">
+              <p>Supported File Type(s): .CSV, .JSON</p>
+          </div>
+  
+          <!-- Step 2: Format Specification -->
+          <div class="step format-specification">
+              <h3>Step 2: Specify Format</h3>
+              <div class="form-group">
+                <label for="fileType">File Type</label>
+                <select id="fileType" name="fileType">
+                  <option value="csv">CSV</option>
+                  <option value="json">JSON</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="encoding">Character Encoding</label>
+                <select id="encoding" name="encoding">
+                  <option value="utf8">UTF-8</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="delimiter">Delimiter</label>
+                <select id="delimiter" name="delimiter">
+                  <option value="comma">Comma</option>
+                </select>
+              </div>
+              <div class="form-group checkbox-container">
+                <input type="checkbox" id="hasHeader" name="hasHeader" checked />
+                <label for="hasHeader">Has Header</label>
+              </div>
+          </div>
+      </div>
+
+    <!-- Step 3: Field Selection -->
+    <div class="step" id="step3">
+        <h3>Step 3: Display Handling</h3>
+        <p>Select the fields to be displayed</p>
+        <div class="fields-container">
+            <div class="available-fields" id="availableFields">
+                <p>Available Fields</p>
+                <!-- Available fields will be populated here by JS -->
+            </div>
+            <div class="fields-to-display" id="fieldsToDisplay">
+                <p>Fields to be Displayed</p>
+                <!-- User-selected fields will be populated here by JS -->
+            </div>
+        </div>
+        <div class="buttons">
+            <button type="button" id="nextButton">Next</button>
+            <button type="button" id="cancelButton">Cancel</button>
+        </div>
+    </div>
+
+    <!-- Table to display the selected fields -->
+    <table id="productTable">
+      <thead>
+        <tr id="tableHeader">
+          <!-- Table Headers will be inserted here -->
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+        <!-- Table Rows will be inserted here -->
+      </tbody>
+    </table>
+
+    <script src="script.js"></script>
+  </body>
+</html>
